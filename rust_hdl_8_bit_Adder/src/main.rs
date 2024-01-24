@@ -58,10 +58,12 @@ fn main() {
             
             ep.done(x)
         });
+
         // Simple running simulation
         // sim.run(Adder8b::default().into(), sim_time::ONE_MILLISECOND)
-            // .unwrap();
+        // .unwrap();
 
+        // Dumping a VCD file
         sim.run_to_file(
             Adder8b::default().into(),
             sim_time::ONE_MILLISECOND,
@@ -69,6 +71,7 @@ fn main() {
         )
         .unwrap();
 
+        //Converting VCD to SVG file
         vcd_to_svg(
             "sims/VCD_adder.vcd",
             "images/SVG_adder.svg",
