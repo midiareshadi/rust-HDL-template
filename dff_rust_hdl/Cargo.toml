@@ -1,7 +1,9 @@
 [package]
-name = "dff_rust_hdl"
+name = "rust_hdl_project"
 version = "0.1.0"
 edition = "2021"
 
 [dependencies]
+rust = "0.0.1"
 rust-hdl = "0.46.0"
+rand = "0.7.3"
