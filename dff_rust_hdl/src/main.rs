@@ -6,9 +6,9 @@ const clock_freq_HZ : u64 = 100_000_000;
 
 #[derive(LogicBlock, Default)]
 struct dff_module {
-    pub sig_d: Signal<In, Bit>,
-    pub sig_q: Signal<Out, Bit>,
+    pub sig_d: Signal<In, Bit>,    
     pub clock: Signal<In, Clock>,
+    pub sig_q: Signal<Out, Bit>,
     my_reg: DFF<Bit>,
 }
 
